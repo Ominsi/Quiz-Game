@@ -1,0 +1,12 @@
+target/
+bin/
+!.mvn/wrapper/maven-wrapper.jar
+
+### Class Files ###
+*.class
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
