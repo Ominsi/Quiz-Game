@@ -1,5 +1,6 @@
 package com.company;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 
@@ -22,10 +23,7 @@ public class Question {
         question = questionInfo[0];
         correctAnswer = questionInfo[1];
         answers = new ArrayList<>();
-        answers = qustionInfo[1];
-        for (int i = 1; i < questionInfo.length; i++) {
-            this.answers.add(questionInfo[i]);
-        }
+        this.answers.addAll(Arrays.asList(questionInfo).subList(1, questionInfo.length));
         Collections.shuffle(this.answers);
     }
 
@@ -51,4 +49,10 @@ public class Question {
     public String getCorrectAnswer(){
         return correctAnswer;
     }
+
+    /**
+     * Prints out the question and all answers.
+     * @param questionNumber The number question the problem is.
+     */
+
 }
