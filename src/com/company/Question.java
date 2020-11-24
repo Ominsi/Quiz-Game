@@ -24,7 +24,7 @@ public class Question {
         correctAnswer = questionInfo[1];
         answers = new ArrayList<>();
         this.answers.addAll(Arrays.asList(questionInfo).subList(1, questionInfo.length));
-        Collections.shuffle(this.answers);
+        Collections.shuffle(answers);
     }
 
     /**
@@ -54,5 +54,12 @@ public class Question {
      * Prints out the question and all answers.
      * @param questionNumber The number question the problem is.
      */
+    public void printQuestion(int questionNumber){
+        char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+        System.out.println(questionNumber + ". " + question);
+        for (int index = 0; index < answers.size(); index++){
+            System.out.println("\t" + alphabet[index] + ".\s" + answers.get(index));
+        }
+    }
 
 }
